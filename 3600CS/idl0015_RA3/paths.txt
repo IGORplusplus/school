@@ -1,0 +1,38 @@
+egrep '[~ ].(/[0-9a-zA-Z.-]+)+' datafile.txt >> paths.txt
+36
+       ~/.bashrc
+              ".:~:/usr".
+              /dev/stdin
+       ~/.profile, in that order.  The --noprofile option may be used  to  in‐
+            . "/etc/bash_completion.d/$1.sh" >/dev/null 2>&1 && return 124
+              ization  file ~/.bashrc if the shell is interactive (see INVOCA‐
+              /dev/stdout
+       /bin/bash
+       from ~/.bashrc and ~/.bashrc, if these files exist  and  are  readable.
+       /etc/profile
+       ~/.bash_logout
+              /var/mail/$USER).
+              TORY below).  The default value is ~/.bash_history.   If  unset,
+              initialize the shell, as in ~/.bashrc.  The value of BASH_ENV is
+       /dev/stdout, or /dev/stderr, file descriptor 0, 1, or 2,  respectively,
+       that file, it looks for ~/.bash_profile, ~/.bash_login, and ~/.profile,
+              /dev/fd/fd
+       /etc/bash.bashrc
+              $include  /etc/inputrc
+       from file instead of /etc/bash.bashrc and ~/.bashrc.
+       /etc/bash.bash.logout
+       s/old/new/
+       reads  and  executes  commands  from /etc/bash.bashrc and ~/.bashrc, if
+              /etc/bash.bashrc and the personal initialization file  ~/.bashrc
+              /dev/stderr
+       able HISTFILE (default ~/.bash_history).  The file named by  the  value
+              /sbin''.
+              fault of ~/.inputrc (see READLINE below).
+              /dev/udp/host/port
+              ~/.bash_login,  or  ~/.profile.   By  default,  bash reads these
+       ~/.inputrc
+              any  of  the  personal  initialization  files   ~/.bash_profile,
+       the INPUTRC variable.  If that variable is unset, the default is ~/.in‐
+       from the file ~/.bash_logout, if it exists.
+              /dev/tcp/host/port
+       ~/.bash_profile

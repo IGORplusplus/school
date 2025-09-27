@@ -1,0 +1,5 @@
+emails: egrep '[a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]*\.[a-zA-Z]{2,}' datafile.txt >> emails.txt
+numbers: egrep '[0-9].' datafile.txt >> numbers.txt
+paths: egrep '[~ ].(/[0-9a-zA-Z.-]+)+' datafile.txt >> paths.txt
+dates: grep -E '[0-1]?[0-9][/-][0-3]?[0-9][/-][0-9]{2,4}' datafile.txt >> dates.txt
+idl0015 Igor Leeck

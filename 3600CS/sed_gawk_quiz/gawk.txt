@@ -1,0 +1,72 @@
+OVERVIEW
+gawk is in a way a language and in some ways is just sed with extra steps
+perform specified actions upon records or fields that contain instances of a pattern
+does not alter input files
+process one input line at a time
+
+
+actions are enclosed in {}
+BEGIN and END
+&& and ||
+! negates the match
+field and record ($0 and $1-9)
+RS accesses new record separator (can be changed in beginning)
+NR is the current record/line number
+gsub, substitutes the line
+
+you can do operations on the field values themselves
+you can access the third to last field like this
+{print $(NF - 2)}
+has printf
+can concatenate strings by doing stuff like $1"" or $1" hello"
+very good at handling strings
+if-else, while, and for statements none of which need to be enclosed with
+brackets
+
+FUNCTIONS
+arithmetic
+string
+output
+special - system commands
+~ regex match operator
+
+REGEX
+. matches any single character except newline
+^ start
+$ end
+* matches zero or more repetitions
++ one or more
+? makes the entire preceding pattern optional
+() groups things together
+[] specifies which characters to search for
+\ escape character
+
+\d - digit
+\D - non-digit
+\w - word character
+\W - non-word character
+\s - whitespace
+\S - non whitespace
+\b - word boundary
+\B - not a word boundary
+
+
+FLAGS
+-F sets field separator(FS), can also be changed in begin
+
+DEFAULT_VARS
+FS - field separator
+RS - record separator
+NF - number of fields in current record
+NR - number of the current record
+OFS - output field separator
+ORS - output record separator
+FILENAME - current filename
+ARGC/ARGV - get arguments from the command line
+
+EXAMPLES
+ls | gawk '
+BEGIN { print "List of html files"}
+/\.html$/ {print}
+END { print "End of list" }
+'

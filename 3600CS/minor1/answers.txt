@@ -1,1 +1,26 @@
+1.
 sed 's,//\(.*\),/* \1 */,' myprog-1.c
+
+
+2.
+sed -n -E '/^[0-9]+(\.[0-9]+)?$/p' numbers-1.txt | sed -n -E '/^(1[5-9]|[2-9][0-9]|[0-9]{3,})(\.[0-9]+)?$/p'
+
+
+4.
+gawk 'NR > 1 { distance = sqrt(($3 - $1)**2 + ($4 - $2)**2)} {print distance}' coords-1.txt
+
+
+5.
+gawk -F, '{ if (($4 == 2024) && ($5 >= 50000)) {printf "%s, %s, %s\n", $1, $2, $5}}' salaries-1.csv
+
+
+6.
+gawk ' NR > 1 {
+angle = $1
+while(angle < 0) 
+{ angle += 360 }
+while(angle > 360) 
+{ angle -= 360 }
+{printf "%8d %d\n", $1, angle}
+}
+' angles-1.txt

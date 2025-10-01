@@ -1,4 +1,4 @@
-d// This is a test of how this works
+// This is a test of how this works
 #include <stdio.h>
 int main()
 {

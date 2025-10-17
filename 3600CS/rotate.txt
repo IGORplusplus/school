@@ -1,0 +1,17 @@
+//rotate.txt
+
+1. The program shifts the number to the right by the significant amount of times (32) and gets added back
+to the left most bits that get shifted over out of significance. The left most bits get shifted over to the right
+to where they would be (32 - shiftamount).
+
+    shift %= 32;
+
+    return source << shift | source >> (32 - shift);
+
+
+2. If the shift amount is 0 nothing should happen, if the number is to bitshifted left 31 times it should
+be bitwise shifted right.
+
+3. Bits wrap are automatically wrapped around the number through the algorithm.
+
+4. The bit shift left, bit shift right, and the bitwise or operation

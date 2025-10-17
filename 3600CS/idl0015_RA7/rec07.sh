@@ -3,7 +3,7 @@
 #idl0015
 #Igor Leeck
 if [ "$#" -ne 1 ]; then
-    echo "Not the right amount of arguments are sent in"
+    echo "Need one argument for this to work"
     exit 1
 fi
 

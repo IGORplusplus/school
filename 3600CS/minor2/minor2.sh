@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#idl0015
+#Igor Leeck
+
 if [[ "$1" == "--debug" ]]; then
     set -x
 fi

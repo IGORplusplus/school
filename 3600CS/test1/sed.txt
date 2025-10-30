@@ -1,0 +1,51 @@
+OVERVIEW
+Sed goes through files line by line editing them in that way
+these lines are edited in the pattern space
+
+STDIN -> SCRIPT -> STDOUT
+  |         |        |
+  V         V        V
+  input   outputs  output
+
+
+SED SCRIPTS
+
+FLAGS
+-r makes sed recognize (), [], *, + as they should be aka extended
+-e inline script
+-i makes the changes inline -i.bak makes changes and makes .bak
+-f in-file script
+-n no automatic output (only prints lines specified by regex)
+
+COMMANDS
+s for substitute
+p for print
+g in last separator makes the command global across the file
+
+i insert
+c change
+
+r read
+w write
+y transform
+= display line number
+N append next line to current one
+q quit
+a for append (sed '5a\Extra line here' file.txt
+
+
+EXAMPLES
+
+s/Warren Buffet/W. Buffet/    Substitute W. Buffet for the first occurrence of Warren Buffet in pattern space
+s/Four/Five/2      Substitutes Five for the second occurrence of Four in the pattern space (i.e., each line)
+s/paper/plastic/p      Substitutes plastic for the first occurrence of paper and outputs (prints) pattern space
+
+
+Substitute can use several special characters in the replacement string
+& replaced by entire string matched in regular expression for pattern
+"the UNIX operating system ..."
+s/.NI./wonderful &/
+
+/^ya*y/,/[0-9]$/d
+deletes from first line that begins with yay, yaay, yaaay, etc. through first line that ends
+with a digit

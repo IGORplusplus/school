@@ -1,0 +1,25 @@
+egrep automatically escapes characters such as 
+.  ^  $  *  +  ?  (  )  [  ]  {  }  |  \
+
+grep automatically escapes these characters
+.  ^  $  *  [  ]  \
+
+
+\< beginning of word
+\> end of word
+$ end of line
+^ beginning of line
+| or
+. any single character
+| or
+() grouping set
+
+{min,max}
++ one or more
+? none or one
+* none or more
+. any single character
+
+
+globbing is used by shells
+for filename expansion for wildcards and such

@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <time.h>
+#include <sys/time.h>
 
 //for sockets specifically
 #include <sys/types.h>
